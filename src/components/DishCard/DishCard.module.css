@@ -116,7 +116,7 @@
   width: var(--dc-button-w);
   min-height: var(--dc-button-h);
   padding: 0 10px;
-  border-radius: 20px 0 0 0;
+  border-radius: 0 20px 0 20px; /* «листик» как в макете: скруглены верхний правый и нижний левый углы */
   font-size: var(--dc-button-fs);
 }
 
