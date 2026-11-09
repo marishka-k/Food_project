@@ -4,6 +4,8 @@
 Учебный проект для портфолио: **заказы не принимаются, данные никуда не отправляются** —
 всё работает в браузере, состояние хранится в `localStorage`.
 
+**Сайт:** https://marishka-k.github.io/Food_project/
+
 ## Стек
 
 - Vite 5 + React 18 + react-router-dom (`HashRouter` — на GitHub Pages прямые ссылки не дают 404)
