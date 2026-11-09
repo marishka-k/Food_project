@@ -1,0 +1,8 @@
+.price {
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.price__prefix {
+  margin-right: 0.5em;
+}

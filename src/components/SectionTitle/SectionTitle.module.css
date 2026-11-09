@@ -1,0 +1,12 @@
+.title {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.title_level_1 {
+  font-size: var(--fs-h2);
+}
+
+.title_level_2 {
+  font-size: var(--fs-h3);
+}

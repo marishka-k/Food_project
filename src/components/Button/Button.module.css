@@ -1,0 +1,94 @@
+/* Скруглены правый верхний и левый нижний углы — фирменная форма из UI Kit */
+.button {
+  --btn-r: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 20px;
+  border: 1px solid transparent;
+  border-radius: 2px var(--btn-r) 2px var(--btn-r);
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.2s, border-color 0.2s, background-color 0.2s;
+}
+
+.button_variant_accent {
+  background: var(--color-accent);
+  color: var(--color-bg);
+}
+
+.button_variant_accent:hover:not(:disabled) {
+  color: var(--color-green);
+}
+
+.button_variant_green {
+  background: var(--color-green);
+  color: var(--color-text);
+}
+
+.button_variant_green:hover:not(:disabled) {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.button:disabled,
+.button[aria-disabled='true'] {
+  background: var(--color-disabled);
+  color: var(--color-bg);
+}
+
+.button_size_large {
+  --btn-r: 22px;
+  min-height: var(--hero-button-h);
+  min-width: var(--hero-button-w);
+  font-size: var(--hero-button-fs);
+}
+
+.button_size_medium {
+  --btn-r: 16px;
+  min-height: 32px;
+  font-size: 16px;
+}
+
+.button_size_small {
+  --btn-r: 12px;
+  min-height: var(--card-button-h);
+  padding: 0 12px;
+  font-size: var(--card-button-fs);
+}
+
+@media (min-width: 1024px) {
+  .button_size_large {
+    --btn-r: 36px;
+  }
+
+  .button_size_medium {
+    --btn-r: 20px;
+    min-height: 46px;
+    font-size: 22px;
+  }
+
+  .button_size_small {
+    --btn-r: 18px;
+    padding: 0 20px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .button_size_large {
+    --btn-r: 40px;
+  }
+
+  .button_size_medium {
+    min-height: 52px;
+    font-size: 24px;
+  }
+
+  .button_size_small {
+    --btn-r: 20px;
+  }
+}

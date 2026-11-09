@@ -1,0 +1,74 @@
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 110;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background: var(--color-overlay);
+}
+
+/* Скруглены правый верхний и левый нижний углы, как в макете окна «финал» */
+.modal__dialog {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-height: 100%;
+  overflow-y: auto;
+  padding: 40px 20px;
+  border: 2px solid var(--color-accent);
+  border-radius: 0 var(--radius-xl) 0 var(--radius-xl);
+  background: var(--color-card);
+  text-align: center;
+  outline: none;
+}
+
+.modal__dialog_size_small {
+  max-width: 420px;
+}
+
+.modal__dialog_size_large {
+  max-width: 300px;
+  min-height: 416px;
+}
+
+.modal__close {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  display: flex;
+  width: 32px;
+  height: 32px;
+  padding: 7px;
+  border: 0;
+  background: none;
+}
+
+.modal__close:hover {
+  color: var(--color-accent);
+}
+
+.modal__close-icon {
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width: 600px) {
+  .modal__dialog_size_large {
+    max-width: 639px;
+    min-height: 512px;
+    padding: 60px 40px;
+  }
+
+  .modal__close {
+    top: 16px;
+    right: 22px;
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+  }
+}

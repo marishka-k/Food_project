@@ -1,0 +1,37 @@
+.drawer {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  background: var(--color-overlay);
+  animation: fade 0.2s ease-out;
+}
+
+.drawer__panel {
+  width: min(300px, calc(100% - 20px));
+  max-height: 100%;
+  overflow-y: auto;
+  outline: none;
+  animation: slide 0.25s ease-out;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(100%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .drawer,
+  .drawer__panel {
+    animation: none;
+  }
+}

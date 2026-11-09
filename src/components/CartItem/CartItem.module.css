@@ -1,0 +1,88 @@
+/* Телефон: фото слева, справа название и цена, ниже — счётчик и урна */
+.cart-item {
+  display: grid;
+  grid-template-columns: 55px minmax(0, 1fr) auto;
+  grid-template-areas:
+    'image name price'
+    '. quantity quantity';
+  column-gap: 10px;
+  min-height: 55px;
+  padding-right: 6px;
+  border-radius: 0 var(--radius-m) 0 var(--radius-m);
+  background: var(--color-card);
+  font-size: var(--fs-cart-item);
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.cart-item__image {
+  grid-area: image;
+  width: 55px;
+  height: 36px;
+  object-fit: cover;
+}
+
+.cart-item__name {
+  grid-area: name;
+  padding-top: 4px;
+  text-decoration: none;
+}
+
+.cart-item__name:hover {
+  color: var(--color-accent);
+}
+
+.cart-item__price {
+  grid-area: price;
+  padding-top: 4px;
+  font-weight: 600;
+}
+
+.cart-item__quantity {
+  grid-area: quantity;
+  justify-self: end;
+  gap: 18px;
+}
+
+@media (min-width: 600px) {
+  .cart-item {
+    grid-template-columns: 120px minmax(0, 1fr) auto auto;
+    grid-template-areas: 'image name price quantity';
+    align-items: center;
+    column-gap: 24px;
+    min-height: 80px;
+    padding-right: 16px;
+  }
+
+  .cart-item__image {
+    width: 120px;
+    height: 80px;
+  }
+
+  .cart-item__name,
+  .cart-item__price {
+    padding-top: 0;
+  }
+
+  .cart-item__quantity {
+    gap: 30px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .cart-item {
+    grid-template-columns: 187px minmax(0, 1fr) auto auto;
+    column-gap: 40px;
+    min-height: 109px;
+    padding-right: 40px;
+  }
+
+  .cart-item__image {
+    width: 187px;
+    height: 109px;
+  }
+
+  .cart-item__quantity {
+    gap: 46px;
+  }
+}

@@ -1,0 +1,36 @@
+.checkout {
+  padding-top: 24px;
+}
+
+.checkout__title {
+  margin-bottom: 20px;
+}
+
+.checkout__layout {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+@media (min-width: 1024px) {
+  .checkout {
+    padding-top: 40px;
+  }
+
+  .checkout__title {
+    margin-bottom: 36px;
+  }
+
+  .checkout__layout {
+    display: grid;
+    grid-template-columns: 360px minmax(0, 1fr);
+    align-items: start;
+    gap: 21px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .checkout__layout {
+    grid-template-columns: 411px minmax(0, 1fr);
+  }
+}

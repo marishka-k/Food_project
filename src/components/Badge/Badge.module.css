@@ -1,0 +1,25 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  height: var(--badge-h);
+  padding: 0 8px;
+  border-radius: var(--radius-s);
+  color: var(--color-text);
+  font-size: var(--badge-fs);
+  font-weight: 600;
+  line-height: 1;
+}
+
+.badge_type_new {
+  background: var(--color-badge-new);
+}
+
+.badge_type_popular {
+  background: var(--color-badge-popular);
+}
+
+@media (min-width: 1024px) {
+  .badge {
+    padding: 0 16px;
+  }
+}

@@ -1,0 +1,112 @@
+.menu {
+  padding-top: 20px;
+}
+
+.menu__content {
+  min-width: 0;
+}
+
+.menu__title {
+  margin-bottom: 12px;
+}
+
+.menu__toolbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* На телефоне чипсы спрятаны: категории выбираются в панели фильтров */
+.menu__chips {
+  display: none;
+}
+
+.menu__filter-button {
+  position: relative;
+  display: flex;
+  width: 36px;
+  height: 36px;
+  margin-left: auto;
+  padding: 8px;
+  border: 0;
+  background: none;
+}
+
+.menu__filter-icon {
+  width: 100%;
+  height: 100%;
+}
+
+.menu__filter-count {
+  position: absolute;
+  top: 0;
+  right: -2px;
+  min-width: 16px;
+  height: 16px;
+  padding: 0 4px;
+  border-radius: 8px;
+  background: var(--color-accent);
+  color: var(--color-bg);
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 16px;
+  text-align: center;
+}
+
+.menu__list,
+.menu__empty {
+  margin-top: 20px;
+}
+
+.menu__empty {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 30px 0;
+}
+
+.menu__drawer {
+  border-radius: 0 var(--radius-l) 0 var(--radius-l);
+}
+
+@media (min-width: 600px) {
+  .menu__toolbar {
+    flex-wrap: wrap;
+  }
+
+  .menu__chips {
+    display: flex;
+    order: 3;
+    width: 100%;
+  }
+
+  .menu__filter-button {
+    order: 2;
+  }
+}
+
+@media (min-width: 1024px) {
+  .menu {
+    display: grid;
+    grid-template-columns: 260px minmax(0, 1fr);
+    align-items: start;
+    gap: 22px;
+    padding-top: 50px;
+  }
+
+  .menu__title {
+    margin: 0 0 26px;
+  }
+
+  .menu__chips {
+    order: 0;
+    width: auto;
+  }
+}
+
+@media (min-width: 1400px) {
+  .menu {
+    grid-template-columns: 305px minmax(0, 1fr);
+  }
+}

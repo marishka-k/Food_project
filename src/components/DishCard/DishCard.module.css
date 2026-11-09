@@ -1,0 +1,121 @@
+/* Скруглены правый верхний угол фото и левый нижний угол карточки.
+   Размеры шрифтов и кнопки — токены --dc-* в global.css */
+.dish-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  border-radius: 0 var(--radius-l) 0 var(--radius-l);
+  background: var(--color-card);
+  overflow: hidden;
+}
+
+.dish-card__media {
+  position: relative;
+}
+
+.dish-card__image {
+  width: 100%;
+  height: var(--card-img-h);
+  object-fit: cover;
+  border-radius: 0 var(--radius-l) 0 var(--radius-l);
+}
+
+/* Плашка «Популярное»/«Новое» — компактная, перекрывает Badge из UI Kit */
+.dish-card__badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  height: auto;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: var(--dc-badge-fs);
+}
+
+.dish-card__favorite {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+}
+
+.dish-card__body {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+  gap: var(--dc-gap);
+  padding: var(--dc-pad-top) var(--dc-pad-x) var(--dc-pad-x);
+}
+
+.dish-card__category {
+  align-self: flex-start;
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: rgba(140, 199, 79, 0.25);
+  color: #3d6b17;
+  font-size: var(--dc-category-fs);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.dish-card__title {
+  font-size: var(--dc-title-fs);
+  font-weight: 700; /* Card name — Bold */
+  line-height: 1.3;
+}
+
+.dish-card__link {
+  text-decoration: none;
+}
+
+.dish-card__link:hover {
+  color: var(--color-accent);
+}
+
+.dish-card__meta {
+  color: rgba(0, 50, 35, 0.6);
+  font-size: var(--dc-meta-fs);
+  line-height: 1.3;
+}
+
+/* Нижняя строка: цена слева, кнопка-«листик» прижата к правому нижнему углу карточки */
+.dish-card__row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 8px;
+  margin: auto calc(var(--dc-pad-x) * -1) calc(var(--dc-pad-x) * -1) 0;
+  padding-top: 6px;
+}
+
+.dish-card__row_in-cart {
+  align-items: center;
+  min-height: calc(var(--dc-button-h) - var(--dc-pad-x) + 6px);
+  margin-right: 0;
+  margin-bottom: 0;
+}
+
+.dish-card__price {
+  padding-bottom: 6px;
+  font-size: var(--dc-price-fs);
+  letter-spacing: -0.01em;
+}
+
+.dish-card__row_in-cart .dish-card__price {
+  padding-bottom: 0;
+}
+
+.dish-card__button {
+  flex: none;
+  width: var(--dc-button-w);
+  min-height: var(--dc-button-h);
+  padding: 0 10px;
+  border-radius: 20px 0 0 0;
+  font-size: var(--dc-button-fs);
+}
+
+/* Планшет: карточки широкие — фото по пропорции, а не фиксированной высоты */
+@media (min-width: 600px) and (max-width: 1023px) {
+  .dish-card__image {
+    height: auto;
+    aspect-ratio: 3 / 2;
+  }
+}

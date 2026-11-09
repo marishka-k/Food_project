@@ -1,0 +1,7 @@
+.dish-section {
+  margin-top: var(--section-gap);
+}
+
+.dish-section__title {
+  margin-bottom: var(--title-gap);
+}

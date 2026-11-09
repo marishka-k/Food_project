@@ -1,0 +1,96 @@
+.dish {
+  padding-top: 24px;
+}
+
+.dish__title {
+  margin-bottom: 40px;
+}
+
+.dish__layout {
+  display: flex;
+  flex-direction: column;
+  gap: 38px;
+}
+
+.dish__info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.dish__info b {
+  font-weight: 600;
+}
+
+.dish__category,
+.dish__nutrition {
+  margin-top: 6px;
+}
+
+.dish__buy {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.dish__price {
+  font-size: 20px;
+}
+
+.dish__button {
+  min-width: 120px;
+}
+
+@media (min-width: 600px) {
+  .dish__title {
+    margin-bottom: 30px;
+  }
+
+  .dish__info {
+    font-size: 18px;
+  }
+
+  .dish__price {
+    font-size: 28px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .dish {
+    padding-top: 40px;
+  }
+
+  .dish__title {
+    margin-bottom: 30px;
+  }
+
+  .dish__layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 25px;
+  }
+
+  .dish__info {
+    gap: 12px;
+  }
+
+  .dish__buy {
+    margin-top: auto;
+    padding-top: 20px;
+  }
+
+  .dish__button {
+    min-width: 200px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .dish__price {
+    font-size: 32px;
+  }
+}

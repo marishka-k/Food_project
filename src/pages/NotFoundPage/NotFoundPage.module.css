@@ -1,0 +1,13 @@
+.not-found {
+  padding-top: 24px;
+}
+
+.not-found__title {
+  margin-bottom: 24px;
+}
+
+@media (min-width: 1024px) {
+  .not-found {
+    padding-top: 50px;
+  }
+}

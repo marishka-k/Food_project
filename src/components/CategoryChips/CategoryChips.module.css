@@ -1,0 +1,27 @@
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.chips__chip {
+  height: 28px;
+  padding: 0 14px;
+  border: 1px solid var(--color-accent);
+  border-radius: 10px;
+  background: var(--color-bg);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.chips__chip:hover {
+  background: var(--color-card);
+}
+
+.chips__chip_active,
+.chips__chip_active:hover {
+  border-color: var(--color-green);
+  background: var(--color-green);
+}
