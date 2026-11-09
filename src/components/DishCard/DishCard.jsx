@@ -38,7 +38,7 @@ export default function DishCard({ dish, showBadge = true, className }) {
       <div className={styles['dish-card__body']}>
         <p className={styles['dish-card__category']}>{categoryLabel[dish.category]}</p>
         <h3 className={styles['dish-card__title']}>
-          <Link className={styles['dish-card__link']} to={url}>
+          <Link className={styles['dish-card__link']} to={url} title={dish.name}>
             {dish.name}
           </Link>
         </h3>
